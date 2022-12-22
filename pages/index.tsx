@@ -13,10 +13,6 @@ const index = (props: Props) => {
     router.push("/product");
   }
 
-  const userButton = () => {
-    router.push("/users");
-  }
-
   return (
     <div style={{display: "flex", flexDirection: "column"}}>
       <h1>Welcome on my Homepage.</h1>
@@ -28,7 +24,9 @@ const index = (props: Props) => {
       </Link>
       <button onClick={handleClick} style={{width: "100px"}}>Please Order</button>
       <h1>Next.js Pre-rendering</h1>
-      <button onClick={userButton} style={{width: "100px"}}>See here the users</button>
+      <button onClick={() => router.push("/users")} style={{width: "100px"}}>See here the users</button>
+      <h3>SSG with Dynamic Parameters</h3>
+      <button onClick={() => router.push("/posts")} style={{width: "100px"}}>See the posts</button>
     </div>
   )
 }

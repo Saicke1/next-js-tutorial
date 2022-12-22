@@ -38,5 +38,3 @@ export async function getStaticProps () {
         }
     }
 }
-
-/* const {username, message, messagecreatedat, avatar, commentid} = comment; */
